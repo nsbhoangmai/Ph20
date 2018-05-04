@@ -1,6 +1,6 @@
 import numpy as np
 
-from A31_spr_exp import*
+from spr_exp import*
 
 def energy_exp(x0, v0, t, h):
     '''

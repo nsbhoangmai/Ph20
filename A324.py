@@ -1,10 +1,12 @@
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from A32_spr_sym import *
+from spr_sym import *
+from load import *
 
-def lag_sym(x0, v0, t, h):
+def lag_sym(input_file, output_file):
     '''
     Input: 
     x0, v0: Initial values of x and v.
@@ -20,6 +22,7 @@ def lag_sym(x0, v0, t, h):
     plt.rc('font',size=12)
     plt.rc('text', usetex=True)    
     
+    [x0, v0, t, h] = load_num(input_file)
     (I, X, V) = spring_sym(x0, v0, t, h)
     Xa = v0 * np.sin(I) + x0 * np.cos(I)
     Va = v0 * np.cos(I) - x0 * np.sin(I)    
@@ -40,4 +43,9 @@ def lag_sym(x0, v0, t, h):
     
     plt.legend(bbox_to_anchor=(1.2,0.5),loc='center right', fontsize=16)
     plt.title('Behavior of spring-mass system', fontsize=18)
-    plt.savefig("Err_sym.png", bbox_inches='tight')
+    plt.savefig(output_file, bbox_inches='tight')
+
+if __name__ == '__main__':
+    input_file = sys.argv[1]
+    output_file = sys.argv[2]
+    lag_sym(input_file, output_file)

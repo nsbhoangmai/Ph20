@@ -1,11 +1,13 @@
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from A31_spr_exp import *
-from A31_spr_imp import *
+from spr_exp import *
+from spr_imp import *
+from load import *
 
-def spring(x0, v0, t, h):
+def spring(input_file, output_file):
     '''
     Input: 
     x0, v0: Initial values of x and v.
@@ -22,7 +24,7 @@ def spring(x0, v0, t, h):
     plt.rc('font',size=12)
     plt.rc('text', usetex=True)    
     
-    
+    [x0, v0, t, h] = load_num(input_file)
     (Ie, Xe, Ve) = spring_exp(x0, v0, t, h)
     (Ii, Xi, Vi) = spring_imp(x0, v0, t, h)
     Xa = v0 * np.sin(Ie) + x0 * np.cos(Ie)
@@ -39,4 +41,9 @@ def spring(x0, v0, t, h):
     plt.xlabel('$t(s)$', fontsize=14)
     plt.legend(bbox_to_anchor=(1.2,0.5),loc='center right', fontsize=16)
     plt.title('Motion of a mass on a spring', fontsize=18)
-    plt.savefig("Spring.png", bbox_inches='tight')
+    plt.savefig(output_file, bbox_inches='tight')
+
+if __name__ == '__main__':
+    input_file = sys.argv[1]
+    output_file = sys.argv[2]
+    spring(input_file, output_file)

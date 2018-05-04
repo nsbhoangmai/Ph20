@@ -1,14 +1,16 @@
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 import scipy.integrate as sci
 import matplotlib.axes as axe
 
-from A31_spr_exp import *
-from A31_spr_imp import *
-from A32_spr_sym import*
+from spr_exp import *
+from spr_imp import *
+from spr_sym import*
+from load import *
 
-def spring_comp(x0, v0, t, h):
+def spring_comp(input_file, output_file):
     '''
     Input: 
     x0, v0: Initial values of x and v.
@@ -24,6 +26,7 @@ def spring_comp(x0, v0, t, h):
     plt.rc('font',size=12)
     plt.rc('text', usetex=True)    
     
+    [x0, v0, t, h] = load_num(input_file)
     (Ie, Xe, Ve) = spring_exp(x0, v0, t, h)
     (Ii, Xi, Vi) = spring_imp(x0, v0, t, h)
     (Is, Xs, Vs) = spring_sym(x0, v0, t, h)
@@ -43,4 +46,9 @@ def spring_comp(x0, v0, t, h):
     plt.legend(bbox_to_anchor=(1.4,0.5),loc='center right', fontsize=16)
     plt.gca().set_aspect('equal', adjustable='box')
     plt.title('Behavior of spring-mass system in phase space', fontsize=18)
-    plt.savefig("Spring_comp.png", bbox_inches='tight')
+    plt.savefig(output_file, bbox_inches='tight')
+
+if __name__ == '__main__':
+    input_file = sys.argv[1]
+    output_file = sys.argv[2]
+    spring_comp(input_file, output_file)

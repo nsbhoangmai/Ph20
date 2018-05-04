@@ -1,10 +1,12 @@
+import sys
 import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from A31_spr_exp import *
+from spr_exp import *
+from load import *
 
-def trunc_exp(x0, v0, t, h):
+def trunc_exp(input_file, output_file):
     '''
     Input: 
     x0, v0: Initial values of x and v.
@@ -21,6 +23,7 @@ def trunc_exp(x0, v0, t, h):
     plt.rc('font',size=12)
     plt.rc('text', usetex=True)    
     
+    [x0, v0, t, h] = load_num(input_file)
     H = np.geomspace(h, h/1024, num=11)
     D1 = []
     D2 = []
@@ -54,4 +57,9 @@ def trunc_exp(x0, v0, t, h):
     plt.legend(bbox_to_anchor=(1.3,0.5),loc='center right', fontsize=16)
     plt.title('Relation between truncation error and $h$',\
               fontsize=18)
-    plt.savefig("Trunc.png", bbox_inches='tight')
+    plt.savefig(output_file, bbox_inches='tight')
+
+if __name__ == '__main__':
+    input_file = sys.argv[1]
+    output_file = sys.argv[2]
+    trunc_exp(input_file, output_file)

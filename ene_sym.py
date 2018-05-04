@@ -1,6 +1,6 @@
 import numpy as np
 
-from A32_spr_sym import*
+from spr_sym import*
 
 def energy_sym(x0, v0, t, h):
     '''

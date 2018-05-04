@@ -2,7 +2,7 @@ import numpy as np
 import matplotlib.pyplot as plt
 import seaborn as sns
 
-from A31_spr_imp import*
+from spr_imp import*
 
 def energy_imp(x0, v0, t, h):
     '''
