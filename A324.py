@@ -23,7 +23,7 @@ def lag_sym(input_file, output_file):
     plt.rc('text', usetex=True)    
     
     [x0, v0, t, h] = load_num(input_file)
-    (I, X, V) = spring_sym(x0, v0, t, h)
+    (I, X, V) = spring_sym(x0, v0, t*100, h)
     Xa = v0 * np.sin(I) + x0 * np.cos(I)
     Va = v0 * np.cos(I) - x0 * np.sin(I)    
     
