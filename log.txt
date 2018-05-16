@@ -1,0 +1,84 @@
+commit 859c7b321f64f7d8d9e3b97f2c73e9a85b8a11d8
+Merge: e1443c0 202c21a
+Author: Mai Nguyen <mhnguyen@caltech.edu>
+Date:   Fri May 4 16:05:24 2018 -0700
+
+    Merge remote-tracking branch 'origin/master'
+
+commit e1443c0511b4301f584fa43832f931cbd1522094
+Author: Mai Nguyen <mhnguyen@caltech.edu>
+Date:   Fri May 4 16:03:25 2018 -0700
+
+    Increase time for appreciable lag
+
+commit 2b7685a9bf962ab56e17277660a167c934a7e168
+Author: Mai Nguyen <mhnguyen@caltech.edu>
+Date:   Fri May 4 16:00:33 2018 -0700
+
+    Remove pdf writeup
+
+commit 9f5a4eb6cf45170866c5fbfe03c89ee35be4aee3
+Author: Mai Nguyen <mhnguyen@caltech.edu>
+Date:   Fri May 4 16:00:05 2018 -0700
+
+    Remove redundant makefiles
+
+commit e539c0fa21e1c1cc913f18a0c12214dd5f87043a
+Author: Mai Nguyen <mhnguyen@caltech.edu>
+Date:   Fri May 4 15:59:32 2018 -0700
+
+    Remove unnecessary var files
+
+commit 52373955d678893176a2a39d0c955c6a50fb0d75
+Author: Mai Nguyen <mhnguyen@caltech.edu>
+Date:   Fri May 4 15:59:04 2018 -0700
+
+    Remove unnecessary var file
+
+commit 202c21a1592755b285c844cb21a1d8f6d083f6b1
+Author: nsbhoangmai <38876996+nsbhoangmai@users.noreply.github.com>
+Date:   Fri May 4 15:47:51 2018 -0700
+
+    Remove unnecessary file
+
+commit 383a7ad791fd852e33420d961f4fecebd5bace6f
+Author: nsbhoangmai <38876996+nsbhoangmai@users.noreply.github.com>
+Date:   Fri May 4 15:47:26 2018 -0700
+
+    Remove unnecessary file
+
+commit 4e97e53f4abf9f691032e2403b6313804353145d
+Author: nsbhoangmai <38876996+nsbhoangmai@users.noreply.github.com>
+Date:   Fri May 4 15:47:10 2018 -0700
+
+    Remove unnecessary file
+
+commit a1271c63d5696eca8f3e77b373c507bb733e169a
+Author: nsbhoangmai <38876996+nsbhoangmai@users.noreply.github.com>
+Date:   Fri May 4 15:47:00 2018 -0700
+
+    Remove unnecessary file
+
+commit 3e452fe8b1745abd986c8dbaeb0391c3a9bad028
+Author: nsbhoangmai <38876996+nsbhoangmai@users.noreply.github.com>
+Date:   Fri May 4 15:46:47 2018 -0700
+
+    Remove unnecessary file
+
+commit 4c169b59d2eaa0677062d19548b225eb7c8af0bc
+Author: Mai Nguyen <mhnguyen@caltech.edu>
+Date:   Fri May 4 15:44:41 2018 -0700
+
+    Add all Ph203 files
+
+commit 2110ae92ea0ee4e82b0aaafe465135cf6174ad17
+Author: nsbhoangmai <38876996+nsbhoangmai@users.noreply.github.com>
+Date:   Fri May 4 15:41:45 2018 -0700
+
+    Increase time for appreciable lag.
+
+commit 9576953cd1522f305deeed4836b625e6f8c16198
+Author: Mai Nguyen <mhnguyen@caltech.edu>
+Date:   Wed May 2 13:21:46 2018 -0700
+
+    Initial commit
